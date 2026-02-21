@@ -1,0 +1,18 @@
+{
+    "name": "Plugins.UnityEditorHelpers.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:7f278ee4148167f49a1a9e1a349d7066"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

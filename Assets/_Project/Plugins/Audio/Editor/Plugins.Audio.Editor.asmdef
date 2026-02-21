@@ -1,0 +1,21 @@
+{
+    "name": "Plugins.Audio.Editor",
+    "rootNamespace": "",
+    "references": [
+        "Plugins.Audio",
+        "FMODUnity",
+        "Plugins.UnityEditorHelpers.Editor",
+        "FMODUnityEditor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
