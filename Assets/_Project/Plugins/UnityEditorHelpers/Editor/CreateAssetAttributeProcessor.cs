@@ -38,7 +38,7 @@ namespace Plugins.UnityEditorHelpers.Editor
                 }
                 
                 var attribute = type.GetCustomAttribute<CreateResourceAssetAttribute>();
-                AssetsHelper.ValidateAssetExists(type, "Assets/_Project/Resources/" + attribute.Name + ".asset");
+                AssetsHelper.ValidateAssetExists(type, "Assets/Resources/" + attribute.Name + ".asset");
             }
         }
     }

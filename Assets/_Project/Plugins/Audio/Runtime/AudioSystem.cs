@@ -82,7 +82,7 @@ namespace Plugins.Audio
             _focusDisposable = _focusHandler.IsFocused.Skip(1).DistinctUntilChanged()
                 .Subscribe(hasFocus =>
                 {
-                    if (_isDisposed || !RuntimeManager.StudioSystem.isValid()) return;
+                    if (_isDisposed) return;
                     
                     RuntimeManager.PauseAllEvents(!hasFocus);
                     
@@ -100,9 +100,6 @@ namespace Plugins.Audio
             _isDisposed = true;
             _focusDisposable?.Dispose();
             _focusDisposable = null;
-            
-            if (!RuntimeManager.StudioSystem.isValid())
-                return;
             
             RuntimeManager.PauseAllEvents(false);
             RuntimeManager.CoreSystem.mixerResume();

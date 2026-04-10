@@ -126,7 +126,7 @@ generate_global_methods parameters indent+"\t"
 indent + "}\n"
 end ~}}
 
-namespace Project.Audio
+namespace Plugins.Audio
 {
     public static partial class AudioSystem
     {

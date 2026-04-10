@@ -43,9 +43,8 @@ namespace Plugins.CICD
                 EditorUtility.DisplayProgressBar(JAM_UPLOADER, "Upload", 0.5f);
                 Thread.Sleep(500);
                 Upload(directory, user, game, channel, version);
-                
-                EditorUtility.DisplayProgressBar(JAM_UPLOADER, "Uploaded success", 1f);
-                Thread.Sleep(500);
+
+                Debug.Log("New Build Uploaded on Itch Successful");
             }
             catch (Exception e)
             {

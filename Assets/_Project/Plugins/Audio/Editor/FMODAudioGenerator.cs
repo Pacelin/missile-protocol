@@ -4,6 +4,7 @@ using FMODUnity;
 using Plugins.UnityEditorHelpers.Editor;
 using Scriban;
 using UnityEditor;
+using UnityEditor.Toolbars;
 using UnityEngine;
 
 namespace Plugins.Audio.Editor
@@ -50,7 +51,15 @@ namespace Plugins.Audio.Editor
     {
         private const string TEMPLATE_PATH = "Assets/_Project/Plugins/Audio/Editor/fmod_template.txt";
         private const string GENERATION_PATH = "Assets/_Project/Plugins/Audio/Runtime/AudioSystem.Generated.cs";
-        
+
+        [MainToolbarElement("Tools/Refresh FMOD", defaultDockPosition = MainToolbarDockPosition.Right)]
+        public static MainToolbarElement RegenerateFMOD()
+        {
+            var icon = FMODUtilsInternal.GetFMODStudioIcon();
+            var content = new MainToolbarContent("Refresh FMOD", icon, string.Empty);
+            return new MainToolbarButton(content, () => { FMODAudioGenerator.Generate(); });
+        }
+
         public static void Generate()
         {
             AssetDatabase.StartAssetEditing();
@@ -71,6 +80,7 @@ namespace Plugins.Audio.Editor
         private static GenerationData CollectData()
         {
             var banks = EventManager.Banks.Select(bank => bank.Name).ToArray();
+            
             var events = EventManager.Events.Select(evt =>
             {
                 return new EventData()
@@ -100,6 +110,7 @@ namespace Plugins.Audio.Editor
                     }).ToArray()
                 };
             }).ToArray();
+            
             var parameters = EventManager.Parameters.Where(p => p.IsGlobal).Select(par =>
             {
                 return new ParameterData()
@@ -116,6 +127,7 @@ namespace Plugins.Audio.Editor
                     name = FMODUtilsInternal.GetParameterName(par)
                 };
             }).ToArray();
+            
             return new GenerationData()
             {
                 banks = banks,
