@@ -4,6 +4,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.Linq;
 using Plugins.Audio;
 using UnityEngine;
+using VContainer;
 using VContainer.Unity;
 
 namespace Project.Core.Pause
@@ -15,6 +16,9 @@ namespace Project.Core.Pause
         private AsyncReactiveProperty<EPauseState> _pauseState = new (EPauseState.None);
         private List<EPauseState> _pausesRequests = new ();
 
+        [Inject]
+        public PauseController() { }
+        
         public void Initialize()
         {
             Application.focusChanged += OnApplicationFocusChanged;

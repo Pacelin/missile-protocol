@@ -38,6 +38,40 @@ MonoBehaviour:
     m_Localized: "\u0412\u044B\u0439\u0442\u0438"
     m_Metadata:
       m_Items: []
+  - m_Id: 22110044295168
+    m_Localized: "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25593208246272
+    m_Localized: "\u041E\u0431 \u0430\u0432\u0442\u043E\u0440\u0435"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 258833009479682
+    m_Localized: "\u042F\u0437\u044B\u043A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369383055953920
+    m_Localized: "\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u0447\u0438\u043A
+      - Pacelin"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369383097896961
+    m_Localized: 'Itch.io:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369383097896963
+    m_Localized: "\u041F\u043E\u0447\u0442\u0430: "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 376679840485376
+    m_Localized: 'Github:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 376679844679680
+    m_Localized: "\u0418\u0433\u0440\u0430 \u0441\u0434\u0435\u043B\u0430\u043D\u0430
+      \u043D\u0430 Ludum Dare 59"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -38,6 +38,38 @@ MonoBehaviour:
     m_Localized: Quit
     m_Metadata:
       m_Items: []
+  - m_Id: 22110044295168
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25593208246272
+    m_Localized: About Us
+    m_Metadata:
+      m_Items: []
+  - m_Id: 258833009479682
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369383055953920
+    m_Localized: Developer - Pacelin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369383097896961
+    m_Localized: 'Itch.io:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369383097896963
+    m_Localized: 'Email: '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 376679840485376
+    m_Localized: 'Github:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 376679844679680
+    m_Localized: Game made for Ludum Dare 59
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

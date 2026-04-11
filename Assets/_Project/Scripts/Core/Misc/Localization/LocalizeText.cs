@@ -1,10 +1,10 @@
-﻿using TMPro;
+﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Localization;
 
 namespace Project.Core.Misc.Localization
 {
-    
     public class LocalizeText : MonoBehaviour
     {
         [HideInInspector] [SerializeField] private TMP_Text _text;

@@ -59,7 +59,10 @@ namespace Project.Core.Misc.Localization
         {
             var objects = FindObjectsByType<LocalizeText>(FindObjectsInactive.Include, FindObjectsSortMode.None);
             foreach (var obj in objects)
+            {
                 obj.OnValidate();
+                EditorUtility.SetDirty(obj);
+            }
         }
     }
 }

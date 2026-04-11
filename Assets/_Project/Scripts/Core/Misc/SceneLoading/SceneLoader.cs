@@ -11,10 +11,8 @@ namespace Project.Core.Misc
     {
         private readonly SceneTransitionView _transitionView;
         
-        public SceneLoader(SceneTransitionView transitionView)
-        {
-            _transitionView = transitionView;
-        }
+        [Inject]
+        public SceneLoader(SceneTransitionView transitionView) => _transitionView = transitionView;
 
         public void Load(int buildIndex, Action<IContainerBuilder> extra, float delay = 0f)
         {
