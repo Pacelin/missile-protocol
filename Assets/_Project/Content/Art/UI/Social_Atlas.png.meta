@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: d90393f5cf816a1488b0056b7e5a46cf
+guid: a093cadca923b1842bac96ddb5ce002b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4399698751714063520
-    second: UI_Flag_Russia_0
+      213: 4145094354559523829
+    second: Social_Atlas_0
+  - first:
+      213: 7239118295781400371
+    second: Social_Atlas_1
+  - first:
+      213: 2279664960872938458
+    second: Social_Atlas_2
+  - first:
+      213: -2740072150807992108
+    second: Social_Atlas_3
+  - first:
+      213: 5115199495344405101
+    second: Social_Atlas_4
+  - first:
+      213: -887486240960348069
+    second: Social_Atlas_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +66,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
@@ -113,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI_Flag_Russia_0
+      name: Social_Atlas_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 43
-        width: 256
-        height: 170
+        x: 8
+        y: 881
+        width: 131
+        height: 127
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +143,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 06b8a51cb4121f2c0800000000000000
-      internalID: -4399698751714063520
+      spriteID: 5fb5ff39a55568930800000000000000
+      internalID: 4145094354559523829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Social_Atlas_1
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 910
+        width: 131
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33fd41b4cb3867460800000000000000
+      internalID: 7239118295781400371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Social_Atlas_2
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 890
+        width: 131
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adb7cb7243ff2af10800000000000000
+      internalID: 2279664960872938458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Social_Atlas_4
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 452
+        width: 514
+        height: 342
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6ab24be6d6dcf640800000000000000
+      internalID: 5115199495344405101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Social_Atlas_5
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 76
+        width: 514
+        height: 342
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b50038847f30fa3f0800000000000000
+      internalID: -887486240960348069
       vertices: []
       indices: 
       edges: []
@@ -138,7 +241,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: b812bde6b886bb14d907a46f077c7759
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +251,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      UI_Flag_Russia_0: -4399698751714063520
+      Social_Atlas_0: 4145094354559523829
+      Social_Atlas_1: 7239118295781400371
+      Social_Atlas_2: 2279664960872938458
+      Social_Atlas_3: -2740072150807992108
+      Social_Atlas_4: 5115199495344405101
+      Social_Atlas_5: -887486240960348069
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

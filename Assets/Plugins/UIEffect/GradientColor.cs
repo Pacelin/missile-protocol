@@ -16,13 +16,13 @@ namespace UiEffect
     {
         private const int ONE_TEXT_VERTEX = 6;
 
-        [SerializeField, ColorUsage(true, hdr: true)]
+        [SerializeField]
         private Color32 m_colorTop = Color.white;
-        [SerializeField, ColorUsage(true, hdr: true)]
+        [SerializeField]
         private Color32 m_colorBottom = Color.white;
-        [SerializeField, ColorUsage(true, hdr: true)]
+        [SerializeField]
         private Color32 m_colorLeft = Color.white;
-        [SerializeField, ColorUsage(true, hdr: true)]
+        [SerializeField]
         private Color32 m_colorRight = Color.white;
         [SerializeField, Range(-1f, 1f)]
         private float m_gradientOffsetVertical = 0f;

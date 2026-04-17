@@ -39,6 +39,10 @@ MonoBehaviour:
     m_Key: button_resume
     m_Metadata:
       m_Items: []
+  - m_Id: 2511122998890496
+    m_Key: button_back
+    m_Metadata:
+      m_Items: []
   - m_Id: 258833009479682
     m_Key: caption_language
     m_Metadata:

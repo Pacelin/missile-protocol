@@ -1,5 +1,4 @@
 ﻿using System;
-using Cysharp.Threading.Tasks;
 using JetBrains.Annotations;
 using Plugins.Audio;
 using Project.Core.Misc;
@@ -35,17 +34,14 @@ namespace Project.Core.Pause
         {
             _window.MainMenuButton.onClick.AddListener(QuitToMainMenu);
             _window.ResumeButton.onClick.AddListener(Hide);
-            _window.SettingsButton.onClick.AddListener(SwitchSettings);
             _pauseButton.onClick.AddListener(Show);
-            
-            _window.SettingsWindow.HideImmediate();
+            _window.ResetWindow();
         }
 
         public void Dispose()
         {
             _window.MainMenuButton.onClick.RemoveListener(QuitToMainMenu);
             _window.ResumeButton.onClick.RemoveListener(Hide);
-            _window.SettingsButton.onClick.RemoveListener(SwitchSettings);
             _pauseButton.onClick.RemoveListener(Show);
             
             if (_showing)
@@ -69,27 +65,12 @@ namespace Project.Core.Pause
             AudioSystem.Global.SetPauseState(AudioSystem.Global.ELabel_PauseState.NotOnPause);
             _window.Hide();
             _showing = false;
-            if (_settingsActive)
-            {
-                _window.SettingsWindow.Hide(_window.GetCancellationTokenOnDestroy());
-                _settingsActive = false;
-            }
         }
 
         private void QuitToMainMenu()
         {
             _pauseController.SetPause(EPauseState.PausedByUser, false);
             _sceneLoader.Load(1);
-        }
-
-        private void SwitchSettings()
-        {
-            var cancellationToken = _window.GetCancellationTokenOnDestroy();
-            if (_settingsActive)
-                _window.SettingsWindow.Hide(cancellationToken);
-            else
-                _window.SettingsWindow.Show(cancellationToken);
-            _settingsActive = !_settingsActive;
         }
     }
 }

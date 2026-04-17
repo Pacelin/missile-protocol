@@ -20,8 +20,8 @@ namespace Project.MainMenu
                 {
                     gameObject.SetActive(true);
                 })
-                .Append(_canvasGroup.DOFade(1, 0.2f))
-                .Join(_mask.DOAnchorMax(new Vector2(1, 1), 0.3f))
+                .Append(_canvasGroup.DOFade(1, 0.15f))
+                .Join(_mask.DOAnchorMax(new Vector2(1, 1), 0.2f))
                 .AppendCallback(() =>
                 {
                     _canvasGroup.interactable = true;
@@ -37,8 +37,8 @@ namespace Project.MainMenu
                 {
                     _canvasGroup.interactable = false;
                 })
-                .Append(_canvasGroup.DOFade(0, 0.2f))
-                .Join(_mask.DOAnchorMax(new Vector2(0, 1), 0.3f))
+                .Append(_canvasGroup.DOFade(0, 0.15f))
+                .Join(_mask.DOAnchorMax(new Vector2(0, 1), 0.2f))
                 .AppendCallback(() =>
                 {
                     gameObject.SetActive(false);

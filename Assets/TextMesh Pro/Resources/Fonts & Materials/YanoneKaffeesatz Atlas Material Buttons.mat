@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: YanoneKaffeesatz Atlas Material Maskable 1
+  m_Name: YanoneKaffeesatz Atlas Material Buttons
   m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
-  m_Parent: {fileID: 8006985742711815183, guid: 996d73b41cad1c246bbb169d42c994fc, type: 2}
+  m_Parent: {fileID: 8006985742711815183, guid: 7bea8ff50450d8b4db1a9762b89a14bd, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -25,10 +25,17 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _ScaleRatioB: 0.50625
-    - _ScaleRatioC: 0.50625
-    - _Stencil: 1
-    - _StencilComp: 3
-    m_Colors: []
+    - _FaceDilate: 0.25
+    - _OutlineSoftness: 0
+    - _OutlineWidth: 0.25
+    - _ScaleRatioA: 0.9
+    - _ScaleRatioB: 0.45
+    - _ScaleRatioC: 0.45
+    - _UnderlayDilate: 1
+    - _UnderlaySoftness: 0
+    m_Colors:
+    - _FaceColor: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+    - _OutlineColor: {r: 0.19999999, g: 0.19999999, b: 0.19999999, a: 1}
+    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.7058824}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

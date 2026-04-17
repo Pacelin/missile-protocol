@@ -7,18 +7,14 @@ namespace Project.MainMenu
     {
         public Button PlayButton => _playButton;
         public Button SettingsButton => _settingsButton;
-        public Button AboutUsButton => _aboutUsButton;
         public Button QuitButton => _quitButton;
 
-        public MainMenuAdditionalWindow SettingsWindow => _settingsWindow;
-        public MainMenuAdditionalWindow AboutUsWindow => _aboutUsWindow;
+        public MainMenuPopup SettingsPopup => _settingsPopup;
         
         [SerializeField] private Button _playButton;
         [SerializeField] private Button _settingsButton;
-        [SerializeField] private Button _aboutUsButton;
         [SerializeField] private Button _quitButton;
         [Space]
-        [SerializeField] private MainMenuAdditionalWindow _settingsWindow;
-        [SerializeField] private MainMenuAdditionalWindow _aboutUsWindow;
+        [SerializeField] private MainMenuPopup _settingsPopup;
     }
 }
