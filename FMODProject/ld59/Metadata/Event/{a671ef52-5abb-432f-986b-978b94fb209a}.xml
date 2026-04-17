@@ -5,7 +5,7 @@
 			<value>Slider</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{0e52612d-41ca-4dcd-aa8b-d732d11cbae9}</destination>
@@ -38,6 +38,9 @@
 		</relationship>
 	</object>
 	<object class="MasterTrack" id="{eaf8f1d1-1d78-41be-9911-e66deba5809a}">
+		<relationship name="modules">
+			<destination>{49262172-b310-4f5c-a7ad-29ed7e97544b}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{c95ab631-db62-438d-8935-f3c835401bb9}</destination>
 		</relationship>
@@ -53,12 +56,19 @@
 			<destination>{57b32e0d-a333-456d-afff-4e41eb2edc22}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{e28d8840-8d81-45d2-a09a-00ffb8853503}" />
+	<object class="EventAutomatableProperties" id="{e28d8840-8d81-45d2-a09a-00ffb8853503}">
+		<property name="maxVoices">
+			<value>1</value>
+		</property>
+		<property name="triggerCooldown">
+			<value>20</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{ee45b249-fe71-4356-88dc-ceedf529bef5}" />
 	<object class="Timeline" id="{c6fbcc1d-ce1e-4b5a-9981-fe36f60b143a}">
-		<property name="isProxyEnabled">
-			<value>false</value>
-		</property>
+		<relationship name="modules">
+			<destination>{49262172-b310-4f5c-a7ad-29ed7e97544b}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{c95ab631-db62-438d-8935-f3c835401bb9}">
 		<relationship name="effectChain">
@@ -69,6 +79,14 @@
 		</relationship>
 		<relationship name="mixer">
 			<destination>{1f809663-6adb-46e8-bc9e-7fa9ffbc8a87}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{49262172-b310-4f5c-a7ad-29ed7e97544b}">
+		<property name="length">
+			<value>0.014999999999999999</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{6f611868-9140-4466-a6c3-84a5c5091eaf}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{16724547-2a99-4e57-b2b5-2ba3a5f90ee5}">

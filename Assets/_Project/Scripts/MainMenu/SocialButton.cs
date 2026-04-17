@@ -12,16 +12,7 @@ namespace Project.MainMenu
         private void OnDisable() => _button.onClick.RemoveListener(OnClick);
         private void OnClick()
         {
-#if UNITY_WEBGL && !UNITY_EDITOR
-            OpenURLInExternalWindow(_link);
-#else
             Application.OpenURL(_link);
-#endif
         }
-        
-#if UNITY_WEBGL && !UNITY_EDITOR
-        [System.Runtime.InteropServices.DllImport("__Internal")]
-        private static extern void OpenURLInExternalWindow(string url);
-#endif
     }
 }

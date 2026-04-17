@@ -197,6 +197,8 @@ GameObject:
   - component: {fileID: 4568661547836214990}
   - component: {fileID: 2715962391960430815}
   - component: {fileID: 1477397821585393430}
+  - component: {fileID: 3794697558995400059}
+  - component: {fileID: 148087008018428146}
   m_Layer: 5
   m_Name: Go_To_Click
   m_TagString: Untagged
@@ -280,10 +282,10 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
@@ -301,7 +303,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 4200777024328442664}
+  m_TargetGraphic: {fileID: 2583297242391885583}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -319,6 +321,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Project.MainMenu.SocialButton
   _button: {fileID: 2715962391960430815}
   _link: https://pacelin.itch.io
+--- !u!114 &3794697558995400059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622635224953622549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201b19e5469d84d49be1bde0410df4d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Core.Misc.ButtonAnimation
+  _renderer: {fileID: 3828658010446938262}
+  _defaultColor: {r: 1, g: 1, b: 1, a: 1}
+  _hoverColor: {r: 0.93962264, g: 0.93962264, b: 0.93962264, a: 1}
+  _downColor: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
+--- !u!114 &148087008018428146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622635224953622549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22b4ebeb3094f3682bbd71b2d9dbe0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Core.Audio.ButtonDefaultSound
 --- !u!1 &6141087590129943228
 GameObject:
   m_ObjectHideFlags: 0

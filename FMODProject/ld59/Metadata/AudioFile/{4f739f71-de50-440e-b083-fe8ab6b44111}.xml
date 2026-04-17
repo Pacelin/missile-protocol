@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{4f739f71-de50-440e-b083-fe8ab6b44111}">
+		<property name="assetPath">
+			<value>skyscraper_seven-click-buttons-ui-menu-sounds-effects-button-6-203600.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.0375510204081633</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{312c105b-1081-49c6-8962-3031961f257c}</destination>
+		</relationship>
+	</object>
+</objects>

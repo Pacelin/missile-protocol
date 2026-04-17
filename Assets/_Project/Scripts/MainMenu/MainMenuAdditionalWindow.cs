@@ -12,11 +12,6 @@ namespace Project.MainMenu
 
         protected virtual void OnDestroy() => DOTween.Kill(this);
 
-        public void ResetWindow()
-        {
-            _mask.anchorMax = new Vector2(0, 1);
-        }
-        
         public UniTask Show(CancellationToken cancellationToken)
         {
             DOTween.Kill(this);
@@ -49,6 +44,15 @@ namespace Project.MainMenu
                     gameObject.SetActive(false);
                 })
                 .ToUniTask(cancellationToken: cancellationToken);
+        }
+
+        public void HideImmediate()
+        {
+            DOTween.Kill(this);
+            _canvasGroup.interactable = false;
+            _canvasGroup.alpha = 0;
+            gameObject.SetActive(false);
+            _mask.anchorMax = new Vector2(0, 1);
         }
     }
 }

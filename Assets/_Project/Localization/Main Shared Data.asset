@@ -31,6 +31,14 @@ MonoBehaviour:
     m_Key: button_about
     m_Metadata:
       m_Items: []
+  - m_Id: 550515747721216
+    m_Key: button_mainmenu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 550515793858560
+    m_Key: button_resume
+    m_Metadata:
+      m_Items: []
   - m_Id: 258833009479682
     m_Key: caption_language
     m_Metadata:

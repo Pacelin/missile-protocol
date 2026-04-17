@@ -6,6 +6,7 @@ using Plugins.Audio;
 using Project.Core.Audio;
 using Project.Core.Misc;
 using UnityEngine;
+using VContainer;
 using VContainer.Unity;
 
 namespace Project.MainMenu
@@ -19,6 +20,7 @@ namespace Project.MainMenu
         private CancellationTokenSource _cts;
         private MainMenuAdditionalWindow _activeAdditionalWindow;
         
+        [Inject]
         public MainMenuController(MainMenuWindow window, SceneLoader sceneLoader)
         {
             _mainMenuWindow = window;
@@ -32,8 +34,8 @@ namespace Project.MainMenu
             _mainMenuWindow.SettingsButton.onClick.AddListener(OnSettingsClicked);
             _mainMenuWindow.AboutUsButton.onClick.AddListener(OnAboutUsClicked);
             
-            _mainMenuWindow.SettingsWindow.ResetWindow();
-            _mainMenuWindow.AboutUsWindow.ResetWindow();
+            _mainMenuWindow.SettingsWindow.HideImmediate();
+            _mainMenuWindow.AboutUsWindow.HideImmediate();
             
             MusicController.Set(EMusicTrack.Main, AudioSystem.MainMenu_Music);
             

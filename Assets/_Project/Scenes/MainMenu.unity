@@ -1904,6 +1904,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6997436371244753960, guid: 84b338eb45740974ab9ac7f8e4315f81, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1227327961}
+    - targetCorrespondingSourceObject: {fileID: 6997436371244753960, guid: 84b338eb45740974ab9ac7f8e4315f81, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1227327962}
   m_SourcePrefab: {fileID: 100100000, guid: 84b338eb45740974ab9ac7f8e4315f81, type: 3}
 --- !u!224 &1227327958 stripped
 RectTransform:
@@ -1939,6 +1942,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Core.Audio.AudioSettingsVolumeSlider
   _busIndex: 01000000
+  _slider: {fileID: 1227327959}
+--- !u!114 &1227327962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227327960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ea99edf16f4b94a6cc8354a5f69a33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Core.Audio.VolumeSliderSound
   _slider: {fileID: 1227327959}
 --- !u!1 &1245491443
 GameObject:
@@ -4051,6 +4067,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Core.Audio.AudioSettingsMasterVolumeSlider
   _slider: {fileID: 1268284478}
+--- !u!114 &1948738254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948738250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ea99edf16f4b94a6cc8354a5f69a33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Core.Audio.VolumeSliderSound
+  _slider: {fileID: 1268284478}
 --- !u!1 &2031253745
 GameObject:
   m_ObjectHideFlags: 0
@@ -4570,6 +4599,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6997436371244753960, guid: 84b338eb45740974ab9ac7f8e4315f81, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1948738253}
+    - targetCorrespondingSourceObject: {fileID: 6997436371244753960, guid: 84b338eb45740974ab9ac7f8e4315f81, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1948738254}
   m_SourcePrefab: {fileID: 100100000, guid: 84b338eb45740974ab9ac7f8e4315f81, type: 3}
 --- !u!224 &3659401946941913437 stripped
 RectTransform:

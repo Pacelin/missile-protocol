@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 6902354530326520202}
   - component: {fileID: 1911578815207284303}
   - component: {fileID: 9180002535805219388}
+  - component: {fileID: 6386733400505690049}
   m_Layer: 5
   m_Name: P_Default_Button
   m_TagString: Untagged
@@ -224,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6924528, g: 0.92833304, b: 1, a: 0.023529412}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -297,3 +298,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d22b4ebeb3094f3682bbd71b2d9dbe0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Project.Core.Audio.ButtonDefaultSound
+--- !u!114 &6386733400505690049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715085460545375247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201b19e5469d84d49be1bde0410df4d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Project.Core.Misc.ButtonAnimation
+  _renderer: {fileID: 1959215793540814335}
+  _defaultColor: {r: 0.69411767, g: 0.92941177, b: 1, a: 0.023529412}
+  _hoverColor: {r: 0.43599144, g: 0.6376236, b: 0.6981132, a: 0.023529412}
+  _downColor: {r: 0.33759344, g: 0.5002498, b: 0.5471698, a: 0.023529412}

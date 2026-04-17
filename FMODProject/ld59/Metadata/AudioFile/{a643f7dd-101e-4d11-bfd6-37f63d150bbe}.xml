@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{a643f7dd-101e-4d11-bfd6-37f63d150bbe}">
+		<property name="assetPath">
+			<value>u_2ttqv1v1rq-10_maus-doppelklick-473886.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.3919999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{312c105b-1081-49c6-8962-3031961f257c}</destination>
+		</relationship>
+	</object>
+</objects>

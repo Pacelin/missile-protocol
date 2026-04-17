@@ -72,6 +72,14 @@ MonoBehaviour:
       \u043D\u0430 Ludum Dare 59"
     m_Metadata:
       m_Items: []
+  - m_Id: 550515747721216
+    m_Localized: "\u0413\u043B\u0430\u0432\u043D\u043E\u0435 \u043C\u0435\u043D\u044E"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 550515793858560
+    m_Localized: "\u0412\u0435\u0440\u043D\u0443\u0442\u044C\u0441\u044F"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
