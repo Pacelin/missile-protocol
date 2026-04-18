@@ -13,6 +13,8 @@ namespace Project.Game
         public event Action OnRelease;
         public event Action OnClick;
 
+        public bool Pressed => _down && _hover;
+        
         public bool Interactable
         {
             get => _interactable;
