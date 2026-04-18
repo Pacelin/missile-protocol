@@ -25,6 +25,7 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
+    - _CullMode: 0
     - _FaceDilate: 0.25
     - _OutlineSoftness: 0
     - _OutlineWidth: 0.25
