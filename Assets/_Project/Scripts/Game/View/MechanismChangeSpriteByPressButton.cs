@@ -2,6 +2,13 @@
 
 namespace Project.Game
 {
+    public class RadarLine : MonoBehaviour
+    {
+        [SerializeField] private Transform _line;
+        
+        
+    }
+    
     public class MechanismChangeSpriteByPressButton : MonoBehaviour
     {
         [SerializeField] private MachineButton _button;

@@ -12,6 +12,7 @@ namespace Project.Core.Pause
     public class PauseController : IInitializable, IDisposable
     {
         public IReadOnlyAsyncReactiveProperty<EPauseState> CurrentState => _pauseState;
+        public bool HasAnyPause => _pauseState.Value != EPauseState.None;
 
         private AsyncReactiveProperty<EPauseState> _pauseState = new (EPauseState.None);
         private List<EPauseState> _pausesRequests = new ();

@@ -51,9 +51,15 @@ namespace Project.Game
 
         public void SetHandlePosition(int step)
         {
-            _steps = Math.Clamp(0, _steps, step);
+            _currentStep = Math.Clamp(step, 0, _steps);
             OnValueChanged?.Invoke();
             UpdateHandlePosition();
+        }
+        
+        public void SetHandlePosition(float normalized)
+        {
+            var step = Mathf.RoundToInt(Mathf.Lerp(0, _steps, normalized));
+            SetHandlePosition(step);
         }
         
         private void UpdateHandlePosition()
