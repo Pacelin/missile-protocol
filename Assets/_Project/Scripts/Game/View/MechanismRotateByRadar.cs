@@ -17,9 +17,9 @@ namespace Project.Game
             G.RadarModel.OnAngleChanged -= OnRadarAngleChanged;
         }
 
-        private void OnRadarAngleChanged(float oldAngle, float newAngle)
+        private void OnRadarAngleChanged()
         {
-            _rotateTransform.rotation = Quaternion.Euler(0, 0, newAngle);
+            _rotateTransform.rotation = Quaternion.Euler(0, 0, G.RadarModel.Angle);
         }
     }
 }

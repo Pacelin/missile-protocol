@@ -20,12 +20,12 @@ namespace Project.Game
 
         public void UpdateAngularVelocity(int directionSign, float deltaTime)
         {
-            _currentAngularVelocity = Mathf.MoveTowards(_currentAngularVelocity, 
-                0, _angularDeceleration * deltaTime);
-
             if (directionSign != 0)
                 _currentAngularVelocity = Mathf.MoveTowards(_currentAngularVelocity,
                     _maxAngularSpeed * directionSign, _angularAcceleration * deltaTime);
+            else
+                _currentAngularVelocity = Mathf.MoveTowards(_currentAngularVelocity, 
+                    0, _angularDeceleration * deltaTime);
         }
     }
 }

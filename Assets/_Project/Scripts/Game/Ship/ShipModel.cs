@@ -1,11 +1,10 @@
 ﻿using System;
-using Project.Game.Map;
 using UnityEngine;
 using UnityEngine.Assertions;
 
 namespace Project.Game
 {
-    public class ShipModel : IMapUnit
+    public class ShipModel
     {
         public event Action OnTransformChanged;
         public event Action OnDamage;
@@ -74,7 +73,7 @@ namespace Project.Game
         public void MoveRotate(Vector2 positionDelta, float rotationDelta)
         {
             _position += positionDelta;
-            _rotation += rotationDelta;
+            _rotation = ((_rotation + rotationDelta) % 360 + 360) % 360;
             OnTransformChanged?.Invoke();
         }
     }

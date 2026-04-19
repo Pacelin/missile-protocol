@@ -79,6 +79,90 @@ MonoBehaviour:
     m_Key: text_ludumdare
     m_Metadata:
       m_Items: []
+  - m_Id: 3078454896889856
+    m_Key: game_open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3078454947221504
+    m_Key: game_thrust
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3078454951415808
+    m_Key: game_bitsignal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3078454951415809
+    m_Key: game_wavesignal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3078454951415810
+    m_Key: game_thrustrotate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3078454951415811
+    m_Key: game_left
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3078454951415812
+    m_Key: game_right
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3078645532200960
+    m_Key: game_bitfixbutton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3146913089458176
+    m_Key: game_kilometers_speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3146913143984128
+    m_Key: game_miles_speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3146913143984129
+    m_Key: settings_kilometer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3146913143984130
+    m_Key: settings_miles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3146913143984131
+    m_Key: settings_measurement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3150908633780224
+    m_Key: game_degrees
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3159980552622080
+    m_Key: game_kilometers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3159980556816384
+    m_Key: game_miles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3189353582301184
+    m_Key: game_targetlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3216299838017536
+    m_Key: game_thermal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3216299842211840
+    m_Key: game_laser
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3216299842211841
+    m_Key: game_signal_send
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3216632207249408
+    m_Key: game_tutorial_open
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -82,6 +82,90 @@ MonoBehaviour:
     m_Localized: Back
     m_Metadata:
       m_Items: []
+  - m_Id: 3078454896889856
+    m_Localized: Open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3078454947221504
+    m_Localized: Thrust
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3078454951415808
+    m_Localized: Bit Filter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3078454951415809
+    m_Localized: Wave Filter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3078454951415810
+    m_Localized: Rotate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3078454951415811
+    m_Localized: Left
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3078454951415812
+    m_Localized: Right
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3078645532200960
+    m_Localized: Fix
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3146913089458176
+    m_Localized: kmph
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3146913143984128
+    m_Localized: mph
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3146913143984129
+    m_Localized: Kilometer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3146913143984130
+    m_Localized: Mile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3146913143984131
+    m_Localized: Measurement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3150908633780224
+    m_Localized: deg/s
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3159980552622080
+    m_Localized: km
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3159980556816384
+    m_Localized: mi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3189353582301184
+    m_Localized: Lock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3216299838017536
+    m_Localized: Heat-seeking
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3216299842211840
+    m_Localized: Laser-guided
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3216299842211841
+    m_Localized: Send signal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3216632207249408
+    m_Localized: Open tutorial
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

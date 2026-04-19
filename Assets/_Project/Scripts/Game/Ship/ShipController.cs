@@ -27,11 +27,16 @@ namespace Project.Game
                 power = 0;
             
             var quaternion = Quaternion.Euler(0, 0, _shipModel.Rotation);
-            var direction = (Vector2) (quaternion * Vector3.right);
+            var direction = (Vector2) (quaternion * Vector3.up);
             
             _shipModel.LinearVelocity.UpdateVelocity(power, direction, Time.deltaTime);
             _shipModel.AngularVelocity.UpdateAngularVelocity(_shipModel.RotateSign, Time.deltaTime);
             _shipModel.Fuel.Consume(power, Time.deltaTime);
+
+            var deltaPosition = _shipModel.LinearVelocity.Value * Time.deltaTime;
+            var deltaRotation = _shipModel.AngularVelocity.Value * Time.deltaTime;
+            
+            _shipModel.MoveRotate(deltaPosition, deltaRotation);
         }
     }
 }

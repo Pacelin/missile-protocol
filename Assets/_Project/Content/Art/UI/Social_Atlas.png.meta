@@ -237,6 +237,50 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Social_Atlas_3
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 404
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35845f5f0bf716540b4f5fdf468e66bf
+      internalID: -2740072150807992108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Social_Atlas_6
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 362
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae1e63c05982e944b2077b55e7df02b
+      internalID: 1482806231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -257,6 +301,7 @@ TextureImporter:
       Social_Atlas_3: -2740072150807992108
       Social_Atlas_4: 5115199495344405101
       Social_Atlas_5: -887486240960348069
+      Social_Atlas_6: 1482806231
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
