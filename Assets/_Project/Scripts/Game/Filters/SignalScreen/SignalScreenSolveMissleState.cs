@@ -1,4 +1,5 @@
-﻿using Project.Game.Map;
+﻿using Plugins.Audio;
+using Project.Game.Map;
 
 namespace Project.Game
 {
@@ -37,9 +38,10 @@ namespace Project.Game
         {
             if (ScreenController.SolvePanel.IsCorrect(_missle.MissleConfiguration))
             {
-                _missle.Explode();
+                AudioSystem.Game_Machines_SignalSend.PlayOneShot();
+                _missle.Explode(false);
                 ScreenController.SwitchState(new SignalScreenMessageState(ScreenController,
-                    ScreenController.WhenTargetDestroyed,
+                    ScreenController.WhenTargetDestroyed, false,
                     () =>
                     {
                         ScreenController.SwitchState(new SignalScreenIdleState(ScreenController));
@@ -47,11 +49,12 @@ namespace Project.Game
             }
             else
             {
+                AudioSystem.Game_Machines_SignalSendFail.PlayOneShot();
                 ScreenController.SwitchState(new SignalScreenMessageState(ScreenController,
-                    ScreenController.WhenTargetError,
+                    ScreenController.WhenTargetError, false,
                     () =>
                     {
-                        if (_missle || ScreenController.CheckSliderMove())
+                        if (!_missle || ScreenController.CheckSliderMove())
                             ScreenController.SwitchTargetLost();
                         else
                             ScreenController.SwitchState(this);

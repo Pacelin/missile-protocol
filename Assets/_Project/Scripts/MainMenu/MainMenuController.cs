@@ -15,6 +15,8 @@ namespace Project.MainMenu
         private readonly MainMenuWindow _mainMenuWindow;
         private readonly SceneLoader _sceneLoader;
 
+        private SoundEventInstance _music;
+        
         [Inject]
         public MainMenuController(MainMenuWindow window, SceneLoader sceneLoader)
         {
@@ -30,10 +32,10 @@ namespace Project.MainMenu
             
             _mainMenuWindow.SettingsPopup.ResetState();
             
-            MusicController.Set(EMusicTrack.Main, AudioSystem.MainMenu_Music);
-            
             _mainMenuWindow.QuitButton.gameObject.SetActive(
                 Application.platform != RuntimePlatform.WebGLPlayer);
+        
+            MusicController.Set(EMusicTrack.Main, AudioSystem.MainMenu_Music);
         }
 
         public void Dispose()

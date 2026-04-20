@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{1e43d11c-07e3-4330-a15f-9f83c539e387}">
+		<property name="name">
+			<value>Frequency</value>
+		</property>
+		<relationship name="folder">
+			<destination>{b35ce600-c180-4791-a5c0-dfac7ac01209}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{43f16594-a8df-4020-8739-318afa95e353}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{43f16594-a8df-4020-8739-318afa95e353}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

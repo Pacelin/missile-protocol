@@ -13,7 +13,7 @@ namespace Project.Game.Map
         private bool _isInZone;
         private CancellationTokenSource _cts;
         
-        private void OnValidate()
+        protected virtual void OnValidate()
         {
             if (!_zone)
                 _zone = GetComponent<MapZone>();

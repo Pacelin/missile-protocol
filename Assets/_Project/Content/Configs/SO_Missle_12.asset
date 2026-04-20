@@ -16,4 +16,4 @@ MonoBehaviour:
   _markIndex: 2
   _series: FAB6000Z99
   _length: 6.0m
-  _solveCode: 123567L
+  _solveCode: "23567L\r"

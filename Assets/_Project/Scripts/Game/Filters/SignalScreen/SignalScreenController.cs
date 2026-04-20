@@ -72,7 +72,7 @@ namespace Project.Game
         public void SwitchTargetLost()
         {
             SwitchState(new SignalScreenMessageState(
-                this, WhenTargetLost,
+                this, WhenTargetLost, true,
                 () => SwitchState(new SignalScreenIdleState(this))));
         }
 

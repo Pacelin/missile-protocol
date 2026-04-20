@@ -313,6 +313,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Project.Game.Map.MapLocation
   _radarColor: {r: 0.42830187, g: 0.84427196, b: 1, a: 1}
   _radarSize: 1
+  _showOnRadar: 1
+  _canLockOn: 0
 --- !u!114 &8453160775345300440
 MonoBehaviour:
   m_ObjectHideFlags: 0

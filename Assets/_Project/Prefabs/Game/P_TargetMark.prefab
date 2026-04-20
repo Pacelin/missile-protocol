@@ -172,10 +172,10 @@ MonoBehaviour:
   _mark: {fileID: 1860793709609957848}
   _rect:
     serializedVersion: 2
-    x: 4.7
-    y: 7.2
-    width: 11
-    height: 5.5
+    x: 4.9
+    y: 7.82
+    width: 11.11
+    height: 4.83
   _nearDistance: 5
   _target: {fileID: 0}
   _text: {fileID: 8157983067265075342}

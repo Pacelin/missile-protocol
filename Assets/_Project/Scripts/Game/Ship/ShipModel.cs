@@ -9,7 +9,6 @@ namespace Project.Game
         public event Action OnTransformChanged;
         public event Action OnDamage;
         public event Action OnHeal;
-        public event Action OnDie;
         
         public FuelModel Fuel => _fuel;
         public LinearVelocity LinearVelocity => _linearVelocity; 
@@ -55,9 +54,9 @@ namespace Project.Game
             Assert.IsTrue(amount > 0);
             _durability = Mathf.Clamp(_durability - amount, 0, _maxDurability);
             OnDamage?.Invoke();
-            
+
             if (_durability == 0)
-                OnDie?.Invoke();
+                G.ResultCanvas.Show(false);
         }
 
         public void Heal(int amount)

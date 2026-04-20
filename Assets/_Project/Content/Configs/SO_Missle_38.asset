@@ -16,4 +16,4 @@ MonoBehaviour:
   _markIndex: 3
   _series: RBS15X000
   _length: 3.0m
-  _solveCode: 125T
+  _solveCode: "245T\r"

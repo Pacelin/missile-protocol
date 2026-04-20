@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading;
+﻿using System.Threading;
 
 namespace Project.Game.Map
 {
@@ -7,6 +6,7 @@ namespace Project.Game.Map
     {
         protected override void OnEnterZone(CancellationToken cancellationToken)
         {
+            G.ResultCanvas.Show(true);
         }
 
         protected override void OnExitZone()

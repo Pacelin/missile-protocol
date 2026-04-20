@@ -163,6 +163,186 @@ MonoBehaviour:
     m_Key: game_tutorial_open
     m_Metadata:
       m_Items: []
+  - m_Id: 3514287382728704
+    m_Key: game_instruction_0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287424671744
+    m_Key: game_instruction_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866048
+    m_Key: game_instruction_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866049
+    m_Key: game_instruction_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866050
+    m_Key: game_instruction_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866051
+    m_Key: game_instruction_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866052
+    m_Key: game_instruction_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866053
+    m_Key: game_instruction_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866054
+    m_Key: game_instruction_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866055
+    m_Key: game_instruction_9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866056
+    m_Key: game_instruction_10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866057
+    m_Key: game_instruction_11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866058
+    m_Key: game_instruction_12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866059
+    m_Key: game_instruction_13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866060
+    m_Key: game_instruction_14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866061
+    m_Key: game_instruction_15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866062
+    m_Key: game_instruction_16
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866063
+    m_Key: game_instruction_17
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866064
+    m_Key: game_instruction_18
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866065
+    m_Key: game_instruction_19
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373012750336
+    m_Key: game_lose_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944640
+    m_Key: game_lose_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944641
+    m_Key: game_lose_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944642
+    m_Key: game_lose_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944643
+    m_Key: game_lose_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944644
+    m_Key: game_lose_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944645
+    m_Key: game_lose_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944646
+    m_Key: game_lose_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944647
+    m_Key: game_lose_9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944648
+    m_Key: game_lose_10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944649
+    m_Key: game_win_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944650
+    m_Key: game_win_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944651
+    m_Key: game_win_3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944652
+    m_Key: game_win_4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944653
+    m_Key: game_win_5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944654
+    m_Key: game_win_6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944655
+    m_Key: game_win_7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944656
+    m_Key: game_win_8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944657
+    m_Key: game_win_9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944658
+    m_Key: game_win_10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944659
+    m_Key: game_thanks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3524396653613056
+    m_Key: game_restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3525506164461568
+    m_Key: game_youlose
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3525506164461569
+    m_Key: game_youwin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3558869394919424
+    m_Key: mainmenu_recomendation
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

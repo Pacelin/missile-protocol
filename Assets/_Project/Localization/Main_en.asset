@@ -166,6 +166,238 @@ MonoBehaviour:
     m_Localized: Open tutorial
     m_Metadata:
       m_Items: []
+  - m_Id: 3514287382728704
+    m_Localized: Ship Control
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287424671744
+    m_Localized: "This is a friendly port \u2013 your objective"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866048
+    m_Localized: "Your ship \xABCandy Delivery\xBB"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866049
+    m_Localized: 'Throttle: the faster you go, the more fuel you consume'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866050
+    m_Localized: Turn by holding down buttons
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866051
+    m_Localized: Your ship's durability. Make sure it doesn't drop to 0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866052
+    m_Localized: Your fuel reserves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866053
+    m_Localized: Enemy missile. Can cause a lot of trouble
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866054
+    m_Localized: Target lock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866055
+    m_Localized: "1 - Use the radar to track enemy missiles. The radar is located
+      on the ship's bow, so don't forget to turn.\n\n2 - Use the antenna knob to
+      fine\u2011tune the signal direction.\n\n3 - Lock the antenna once you have
+      aimed it at the target. This will allow you to connect to the missile."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866056
+    m_Localized: "1 - To connect to the missile, you need to correct errors.\n\n2
+      - Use the panel to toggle between bits and to adjust the \xABred\xBB bits."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866057
+    m_Localized: '1 - To connect to the missile, you need to synchronise the parameters.
+
+
+      2
+      - Use the panel to change frequency and amplitude. You must match our parameters
+      with the missile''s parameters.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866058
+    m_Localized: Missile destruction
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866059
+    m_Localized: '1 - Missile name and serial number.
+
+      
+
+      2 - A special
+      symbol that engineers decided to paint on the missile for no particular reason.
+
+      
+
+      3
+      - Missile length.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866060
+    m_Localized: "Signal control panel.\n\nTo destroy missiles, you must transmit
+      a special signal that is generated based on the missile's characteristics.\n\n1
+      - Bit switches \u2013 needed to correctly identify the target.\n\n2 - Missile
+      guidance method.\n\n3 - Press \xABSend Signal\xBB when you are sure you have
+      set all missile parameters correctly.\n\nIf everything is done according to
+      the instructions, the missile will be destroyed."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866061
+    m_Localized: MISSILE DISARMAMENT INSTRUCTIONS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866062
+    m_Localized: Look at the missile. Find the first matching condition in the list
+      below. As soon as a condition matches, immediately select the required mode.
+      Do not check further
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866063
+    m_Localized: "1. <b>HEAT</b>, if:\n   - a <b>circle</b> is painted on the missile
+      <b>AND</b> its length is <b>less than 4 metres</b>, <b>OR</b>\n   - the name
+      contains <b>\xABR-\xBB</b> (e.g., R-77).\n\n2. <b>LASER</b>, if:\n   - a <b>square</b>
+      is on the missile <b>AND</b> the serial number contains the letter <b>Z</b>,
+      <b>OR</b>\n   - the missile length is <b>6 metres or more</b>.\n\n3. <b>HEAT</b>,
+      if:\n   - the name ends with an <b>even digit</b> (0, 2, 4, 6, 8), <b>OR</b>\n  
+      - the serial number starts with the letter <b>X</b>.\n\n4. <b>LASER</b>, if:\n  
+      - the serial number starts and ends with the <b>same letter</b>, <b>OR</b>\n  
+      - the sum of all digits in the serial number is <b>greater than 30</b>.\n\n5.
+      If none of conditions 1\u20134 apply \u2013 choose <b>HEAT</b>."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866064
+    m_Localized: Now look at the missile again. <b>Press each button from 1 to 8</b>
+      for which the condition is true. Buttons can be pressed in any order. If the
+      condition does not apply, do not press the button.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3514287428866065
+    m_Localized: "<b>1</b> \u2013 (a <b>star</b> on the missile <b>AND</b> length
+      is an <b>integer</b>, e.g. 4.0, 5.0, 8.0) <b>OR</b> (the name contains <b>\xABMIM\xBB</b>)\n\n<b>2</b>
+      \u2013 (the serial number has <b>three identical symbols in a row</b>, e.g.
+      AAA, 111, ZZZ) <b>OR</b> (missile length <b>less than 3 metres</b>)\n\n<b>3</b>
+      \u2013 (the name contains <b>\xABFAB\xBB</b>) <b>OR</b> (the name contains
+      <b>\xABAGM\xBB</b>)\n\n<b>4</b> \u2013 (missile length <b>greater than 7 metres</b>)
+      <b>OR</b> (a <b>triangle</b> on the missile <b>AND</b> the last digit of the
+      serial number equals <b>0</b>)\n\n<b>5</b> \u2013 (the sum of all digits in
+      the serial number is <b>even</b>) <b>OR</b> (a <b>circle</b> on the missile
+      <b>AND</b> length <b>5 metres or more</b>)\n\n<b>6</b> \u2013 (a <b>triangle</b>
+      on the missile <b>AND</b> the last digit of the serial number is <b>odd</b>)
+      <b>OR</b> (missile length <b>from 4 to 6 metres inclusive</b>)\n\n<b>7</b>
+      \u2013 (the name contains a <b>hyphen \xAB-\xBB</b>) <b>OR</b> (the serial
+      number <b>ends with a letter</b>)\n\n<b>8</b> \u2013 Press button 8 <b>only
+      when none of conditions 1\u20137 apply</b>. If at least one condition from
+      1\u20137 is true, you MUST NOT press button 8."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373012750336
+    m_Localized: "Watch the radar \u2014 it's on the bow."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944640
+    m_Localized: Thrust gives speed, but also burns fuel.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944641
+    m_Localized: Red bits must be fixed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944642
+    m_Localized: Without turning, your radar is useless.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944643
+    m_Localized: Amplitude and frequency must match the missile's.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944644
+    m_Localized: Reading the disarm manual helps.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944645
+    m_Localized: Space doesn't forgive rushing.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944646
+    m_Localized: You exploded. But it looked cool.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944647
+    m_Localized: These flights cost the insurance company a lot.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944648
+    m_Localized: Candy not delivered. Crew is disappointed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944649
+    m_Localized: Missile disarmed. Flight continues.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944650
+    m_Localized: "Signal sent \u2014 target destroyed."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944651
+    m_Localized: You saved the ship and the candy.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944652
+    m_Localized: Great work! The radar didn't let you down.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944653
+    m_Localized: Bits aligned, waves synced. Victory.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944654
+    m_Localized: One more missile in the scrap heap.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944655
+    m_Localized: The manual worked. You're alive.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944656
+    m_Localized: Friendly port welcomes the hero.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944657
+    m_Localized: "Fuel left, hull intact \u2014 excellent flight."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944658
+    m_Localized: Candy delivered. Mission accomplished.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3523373016944659
+    m_Localized: Thanks for playing!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3524396653613056
+    m_Localized: Restart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3525506164461568
+    m_Localized: You've lost...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3525506164461569
+    m_Localized: You've won!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3558869394919424
+    m_Localized: It is recommended to play with a friend.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

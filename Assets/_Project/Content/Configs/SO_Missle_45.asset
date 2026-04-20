@@ -16,4 +16,4 @@ MonoBehaviour:
   _markIndex: 1
   _series: STORMA000
   _length: 3.2m
-  _solveCode: 25T
+  _solveCode: "25T\r"

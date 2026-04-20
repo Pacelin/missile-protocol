@@ -49,7 +49,7 @@ Material:
     - _Offset: -122.4
     - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 0.2941176, g: 0.7294118, b: 0.5098038, a: 0.1882353}
+    - _Color: {r: 0.29411757, g: 0.7294118, b: 0.5098037, a: 0.21568628}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

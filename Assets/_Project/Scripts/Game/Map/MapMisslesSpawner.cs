@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using Plugins.Audio;
 using Project.Game.Missles;
+using Unity.Cinemachine;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -7,26 +10,39 @@ namespace Project.Game.Map
 {
     public class MapMisslesSpawner : MonoBehaviour
     {
-        public int AliveMissles => _aliveMissles;
+        public int AliveMissles => _missles.Count;
         
         [SerializeField] private MapMissle _prefab;
         [SerializeField] private TargetMark _markPrefab;
         [SerializeField] private Vector2 _spawnDistanceRange;
         [SerializeField] private MissleConfiguration[] _missleConfigurations;
-
-        private int _aliveMissles;
-
+        [Space]
+        [SerializeField] private Vector2 _misslePingDistances = new Vector2(1, 200);
+        [SerializeField] private Vector2 _misslePingDelays = new Vector2(0.05f, 2);
+        [Space] 
+        [SerializeField] private Vector2 _speedDistanceRange;
+        [SerializeField] private Vector2 _misslesSpeedByDistance = new Vector2(3, 12);
+        [SerializeField] private Transform _gameFinish;
+        [SerializeField] private CinemachineImpulseSource _impulseSource;
+        
+        private readonly List<MapMissle> _missles = new List<MapMissle>();
+        private float _lastPingTime;
+        
         public void Spawn(Vector3 position)
         {
             var missleConfiguration = _missleConfigurations[Random.Range(0, _missleConfigurations.Length)];
             var filters = Enum.GetValues(typeof(EFilter));
             var filter = (EFilter)filters.GetValue(Random.Range(0, filters.Length));
 
+            var distance = Vector2.Distance(G.ShipModel.Position, (Vector2) _gameFinish.position);
+            var t = Mathf.Clamp01(Mathf.InverseLerp(_speedDistanceRange.x, _speedDistanceRange.y, distance));
+            var missleSpeed = Mathf.Lerp(_misslesSpeedByDistance.x, _misslesSpeedByDistance.y, 1 - t);
+            
             var mark = Instantiate(_markPrefab);
             var missle = Instantiate(_prefab, position, Quaternion.identity);
-            missle.Setup(filter, missleConfiguration, mark, this);
+            missle.Setup(filter, missleConfiguration, mark, missleSpeed, this);
             
-            _aliveMissles++;
+            _missles.Add(missle);
         }
         
         public void Spawn()
@@ -37,9 +53,40 @@ namespace Project.Game.Map
             Spawn(spawnPoint);
         }
 
-        public void OnMissleExplode()
+        public void OnMissleExplode(MapMissle missle, bool damage)
         {
-            _aliveMissles--;
+            if (damage)
+            {
+                G.ShipModel.TakeDamage(1);
+                AudioSystem.Game_Map_MissileExplosion.PlayOneShot();
+                _impulseSource.GenerateImpulse();
+            }
+            _missles.Remove(missle);
+        }
+
+        private void Update()
+        {
+            if (G.PauseController.HasAnyPause)
+                return;
+
+            if (_missles.Count == 0)
+                return;
+
+            var nearest = Vector2.Distance(_missles[0].transform.position, G.ShipModel.Position);
+            for (int i = 1; i < _missles.Count; i++)
+            {
+                var distance = Vector2.Distance(_missles[i].transform.position, G.ShipModel.Position);
+                if (distance < nearest)
+                    nearest = distance;
+            }
+
+            var t = 1 - Mathf.InverseLerp(_misslePingDistances.x, _misslePingDistances.y, nearest);
+            var delay = Mathf.Lerp(_misslePingDelays.x, _misslePingDelays.y, 1 - t * t);
+            if (_lastPingTime + delay < Time.time)
+            {
+                AudioSystem.Game_Map_MissilePing.PlayOneShot();
+                _lastPingTime = Time.time;
+            }
         }
     }
 }

@@ -7,6 +7,7 @@ namespace Project.Core.Pause
     {
         None = 0,
         PausedByApplication = 1,
-        PausedByUser = 2
+        PausedByUser = 2,
+        PausedByEnding = 3
     }
 }

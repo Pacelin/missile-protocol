@@ -31,7 +31,7 @@ namespace Project.Game.Missles
                 }
                 else if (solveSymb == 'L')
                     requireSeek = _laser;
-                else
+                else if (solveSymb == 'T')
                     requireSeek = _thermal;
             }
 

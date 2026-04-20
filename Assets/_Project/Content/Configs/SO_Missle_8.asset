@@ -16,4 +16,4 @@ MonoBehaviour:
   _markIndex: 3
   _series: AAA1234567
   _length: 7.2m
-  _solveCode: 2456L
+  _solveCode: "24567L\r"

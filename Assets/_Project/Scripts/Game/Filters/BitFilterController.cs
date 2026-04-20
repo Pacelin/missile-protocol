@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using Plugins.Audio;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -21,8 +22,6 @@ namespace Project.Game
         [SerializeField] private MachineButton _moveLeftButton;
         [SerializeField] private MachineButton _moveRightButton;
         [SerializeField] private MachineButton _switchButton;
-        [Space] 
-        [SerializeField] private MachineButton _unlockButton;
         
         private BitFilter _filter;
         private int _currentIndex;
@@ -48,9 +47,6 @@ namespace Project.Game
 
         public void StartFilter(IFilterHandler filterHandler)
         {
-            if (_unlockButton)
-                _unlockButton.Interactable = true;
-            
             var length = Random.Range(_lengthRange.x, _lengthRange.y + 1);
             _filter = BitFilter.New(length,
                 (int) (length * _incorrectPercent),
@@ -68,7 +64,6 @@ namespace Project.Game
         public void StopFilter()
         {
             gameObject.SetActive(false);
-            _filter = null;
         }
 
         private void DoMove(int indexOffset)
@@ -78,6 +73,11 @@ namespace Project.Game
                 return;
             
             _currentIndex = newIndex;
+            if (_filter.IsOne(_currentIndex))
+                AudioSystem.Game_Machines_BitOne.PlayOneShot();
+            else
+                AudioSystem.Game_Machines_BitZero.PlayOneShot();
+            
             _transform.DOKill();
             _transform.DOLocalMoveX(_offsetByIndex * _currentIndex, 0.1f);
         }
@@ -86,6 +86,10 @@ namespace Project.Game
         {
             _filter.Switch(_currentIndex);
             _text.text = _filter.GetString();
+            if (_filter.IsOne(_currentIndex))
+                AudioSystem.Game_Machines_BitOne.PlayOneShot();
+            else
+                AudioSystem.Game_Machines_BitZero.PlayOneShot();
         }
 
         private void MoveRightButtonClick() => DoMove(1);

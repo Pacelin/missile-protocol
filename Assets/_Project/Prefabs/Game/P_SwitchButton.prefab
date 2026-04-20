@@ -80,19 +80,20 @@ MonoBehaviour:
   _onSound:
     _eventRef:
       Guid:
-        Data1: -291369823
-        Data2: 1280683505
-        Data3: 1729532826
-        Data4: -1685885936
-      Path: event:/UI/Select
+        Data1: -255747025
+        Data2: 1253053082
+        Data3: 1597848750
+        Data4: -2030600704
+      Path: event:/Game/Machines/ButtonOn
   _offSound:
     _eventRef:
       Guid:
-        Data1: -291369823
-        Data2: 1280683505
-        Data3: 1729532826
-        Data4: -1685885936
-      Path: event:/UI/Select
+        Data1: -907253717
+        Data2: 1092231507
+        Data3: 1684275385
+        Data4: -169419285
+      Path: event:/Game/Machines/ButtonOff
+  _on: 0
 --- !u!212 &2844642880114443708
 SpriteRenderer:
   serializedVersion: 2

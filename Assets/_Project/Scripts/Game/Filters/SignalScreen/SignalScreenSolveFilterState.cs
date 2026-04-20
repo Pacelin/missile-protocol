@@ -38,7 +38,7 @@ namespace Project.Game
         public void OnFilterComplete()
         {
             ScreenController.SwitchState(new SignalScreenMessageState(ScreenController,
-                ScreenController.WhenSolveFilter, () =>
+                ScreenController.WhenSolveFilter, true, () =>
                 {
                     if (!_missle || ScreenController.CheckSliderMove())
                         ScreenController.SwitchTargetLost();

@@ -34,7 +34,7 @@ namespace Project.Game
         public string GetString()
         {
             var builder = new StringBuilder();
-            for (int i = 0; i < -_correct.Length; i++)
+            for (int i = 0; i < _correct.Length; i++)
             {
                 string symb = _current[i] ? "1" : "0";
                 string format = _current[i] == _correct[i] ? _correctFormat : _incorrectFormat;
@@ -75,11 +75,13 @@ namespace Project.Game
                         continue;
 
                     filter._current[index] = !filter._current[index];
-                    minIncorrectCount++;
+                    minIncorrectCount--;
                 }
             }
 
             return filter;
         }
+
+        public bool IsOne(int currentIndex) => _current[currentIndex];
     }
 }

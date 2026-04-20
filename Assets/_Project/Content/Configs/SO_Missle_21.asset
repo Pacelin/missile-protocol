@@ -16,4 +16,4 @@ MonoBehaviour:
   _markIndex: 1
   _series: R73A12345
   _length: 2.0m
-  _solveCode: 127T
+  _solveCode: "127T\r"

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Project.Game.Map;
 using UnityEngine;
 
@@ -47,31 +48,43 @@ namespace Project.Game
         {
             var halfLockAngle = _lockAngle * 0.5f;
             var halfSatelliteAngle = _satelliteAngle * 0.5f;
-            var satelliteDelta = Mathf.Lerp(-halfSatelliteAngle, halfSatelliteAngle, 
+            var satelliteDelta = Mathf.Lerp(halfSatelliteAngle, -halfSatelliteAngle, 
                 _satelliteHandle.NormalizedValue);
-            var scanAngle1 = NormalizeAngle(satelliteDelta - halfLockAngle);
-            var scanAngle2 = NormalizeAngle(satelliteDelta + halfLockAngle);
+            var scanAngle1 = NormalizeAngle(G.ShipModel.Rotation + satelliteDelta - halfLockAngle);
+            var scanAngle2 = NormalizeAngle(G.ShipModel.Rotation + satelliteDelta + halfLockAngle);
+            Debug.Log("SatelliteDelta: " + satelliteDelta + "; scan1: " + scanAngle1 + "; scan2: " + scanAngle2);
+
+            var validTargets = new List<MapLocation>();
             foreach (var mapZone in MapLocation.AvailableLocations)
             {
                 if (mapZone)
                 {
-                    if (IsPositionAvailable(mapZone.Position, scanAngle1, scanAngle2, out _))
-                        return mapZone;
+                    if (!mapZone.CanLockOn)
+                        continue;
+                    bool isAvailable = IsPositionAvailable(mapZone.Position, scanAngle1, scanAngle2,
+                        out var targetAngle, out _);
+                    Debug.Log("Target on " + targetAngle, mapZone);
+                    if (isAvailable)
+                        validTargets.Add(mapZone);
                 }
             }
 
-            return null;
-        }
+            if (validTargets.Count == 0)
+                return null;
 
-        public bool CanLockOnTarget(Vector2 position)
-        {
-            var halfLockAngle = _lockAngle * 0.5f;
-            var halfSatelliteAngle = _satelliteAngle * 0.5f;
-            var satelliteDelta = Mathf.Lerp(-halfSatelliteAngle, halfSatelliteAngle, 
-                _satelliteHandle.NormalizedValue);
-            var scanAngle1 = NormalizeAngle(satelliteDelta - halfLockAngle);
-            var scanAngle2 = NormalizeAngle(satelliteDelta + halfLockAngle);
-            return IsPositionAvailable(position, scanAngle1, scanAngle2, out _);
+            var nearest = validTargets[0];
+            var nearestDistance = Vector2.Distance(nearest.Position, G.ShipModel.Position);
+            for (int i = 1; i < validTargets.Count; i++)
+            {
+                var distance = Vector2.Distance(validTargets[i].Position, G.ShipModel.Position);
+                if (distance < nearestDistance)
+                {
+                    nearest = validTargets[i];
+                    nearestDistance = distance;
+                }
+            }
+
+            return nearest;
         }
 
         private void UpdatePings(float prevAngle)
@@ -106,26 +119,27 @@ namespace Project.Game
 
             foreach (var mapZone in MapLocation.AvailableLocations)
             {
-                if (mapZone)
+                if (mapZone && mapZone.ShowOnRadar)
                 {
-                    if (IsPositionAvailable(mapZone.Position, scanAngle1, scanAngle2,
+                    if (IsPositionAvailable(mapZone.Position, scanAngle1, scanAngle2, out _,
                             out var vector))
                         OnPingPosition?.Invoke(mapZone, vector);
                 }
             }
         }
 
-        private bool IsPositionAvailable(Vector2 position, float scanAngle1, float scanAngle2,
+        private bool IsPositionAvailable(Vector2 position, float scanAngle1, float scanAngle2, out float targetAngle,
             out Vector2 vector)
         {
             var shipPosition = G.ShipModel.Position;
             vector = position - shipPosition;
+            targetAngle = 0;
             if (vector.sqrMagnitude > _scanDistance * _scanDistance)
                 return false;
 
-            var angle = NormalizeAngle(Mathf.Atan2(vector.y, vector.x) * Mathf.Rad2Deg - 90);
+            targetAngle = NormalizeAngle(Mathf.Atan2(vector.y, vector.x) * Mathf.Rad2Deg - 90);
 
-            return IsInSector(angle, scanAngle1, scanAngle2);
+            return IsInSector(targetAngle, scanAngle1, scanAngle2);
         }
     }
 }

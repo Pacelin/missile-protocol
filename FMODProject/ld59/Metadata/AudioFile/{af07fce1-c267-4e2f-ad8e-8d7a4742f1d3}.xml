@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{af07fce1-c267-4e2f-ad8e-8d7a4742f1d3}">
+		<property name="assetPath">
+			<value>72682__owyheesound__electronic_buttons_assorted.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>14.968163265306123</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{312c105b-1081-49c6-8962-3031961f257c}</destination>
+		</relationship>
+	</object>
+</objects>

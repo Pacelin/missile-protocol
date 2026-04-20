@@ -16,4 +16,4 @@ MonoBehaviour:
   _markIndex: 0
   _series: RBS15A123
   _length: 5.0m
-  _solveCode: 156T
+  _solveCode: "56T\r"

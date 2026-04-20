@@ -16,4 +16,4 @@ MonoBehaviour:
   _markIndex: 0
   _series: RBS15C777
   _length: 9.5m
-  _solveCode: 245L
+  _solveCode: "245L\r"

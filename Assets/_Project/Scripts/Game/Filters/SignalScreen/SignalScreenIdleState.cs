@@ -1,4 +1,5 @@
 ﻿using Project.Game.Map;
+using Debug = UnityEngine.Debug;
 
 namespace Project.Game
 {
@@ -26,6 +27,7 @@ namespace Project.Game
         private void OnSnapTargetClick()
         {
             var lockTarget = G.RadarModel.TryLockTarget();
+            Debug.Log("Try Lock Target", lockTarget);
             if (lockTarget && lockTarget.TryGetComponent<MapMissle>(out var missle))
                 ScreenController.SwitchState(new SignalScreenSolveFilterState(ScreenController, missle));
         }

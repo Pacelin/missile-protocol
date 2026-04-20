@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Plugins.Audio;
+using UnityEngine;
 
 namespace Project.Game
 {
@@ -10,19 +11,15 @@ namespace Project.Game
         [SerializeField] private MachineSliderHandle _frequencySlider;
         [SerializeField] private SineWaveGraph _correct;
         [SerializeField] private SineWaveGraph _current;
-        [Space]
-        [SerializeField] private MachineButton _unlockButton;
 
         private WaveFilter _filter;
+        private SoundEventInstance _soundEvent;
         
         public void StartFilter(IFilterHandler handler)
         {
-            if (_unlockButton)
-                _unlockButton.Interactable = true;
-
             _filter = WaveFilter.New(
                 _amplitudeRange, _frequencyRange,
-                _amplitudeSlider.Steps,
+                _amplitudeSlider.Steps, _frequencySlider.Steps,
                 _amplitudeSlider.CurrentStep,
                 _frequencySlider.CurrentStep);
 
@@ -32,12 +29,21 @@ namespace Project.Game
             _correct.frequency = _filter.GetFrequencyCorrectSin();
             _filter.SetHandler(handler);
             gameObject.SetActive(true);
+
+            _soundEvent = AudioSystem.Game_Machines_Sine.CreateInstance();
+            SetAudioParameters();
+            _soundEvent.Start();
         }
 
         public void StopFilter()
         {
             gameObject.SetActive(false);
-            _filter = null;
+            if (_soundEvent != null)
+            {
+                _soundEvent.Stop(false);
+                _soundEvent.Release();
+                _soundEvent = null;
+            }
         }
         
         private void OnEnable()
@@ -50,18 +56,36 @@ namespace Project.Game
         {
             _amplitudeSlider.OnValueChanged -= OnAmplitudeValueChanged;
             _frequencySlider.OnValueChanged -= OnFrequencyValueChanged;
-        }
-
-        private void OnFrequencyValueChanged()
-        {
-            _filter.SetAmplitudeStep(_amplitudeSlider.CurrentStep);
-            _current.amplitude = _filter.GetAmplitudeSin();
+            
+            if (_soundEvent != null)
+            {
+                _soundEvent.Stop(false);
+                _soundEvent.Release();
+                _soundEvent = null;
+            }
         }
 
         private void OnAmplitudeValueChanged()
         {
+            _filter.SetAmplitudeStep(_amplitudeSlider.CurrentStep);
+            _current.amplitude = _filter.GetAmplitudeSin();
+            SetAudioParameters();
+        }
+
+        private void OnFrequencyValueChanged()
+        {
             _filter.SetFrequencyStep(_frequencySlider.CurrentStep);
             _current.frequency = _filter.GetFrequencySin();
+            SetAudioParameters();
+        }
+
+        private void SetAudioParameters()
+        {
+            if (_soundEvent == null)
+                return;
+
+            AudioSystem.Global.SetAmplitude(_filter.GetAmplitudeNormalized());
+            AudioSystem.Global.SetFrequency(_filter.GetFrequencyNormalized());
         }
     }
 }

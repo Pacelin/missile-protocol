@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace Project.Game.Missles.Editor
 {
+    using UnityEngine;
+using UnityEditor;
+
     public class MissleConfigurationCreator : EditorWindow
     {
         private string _text;

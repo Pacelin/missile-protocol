@@ -16,4 +16,4 @@ MonoBehaviour:
   _markIndex: 1
   _series: FAB5000Z12
   _length: 5.0m
-  _solveCode: 123567T
+  _solveCode: "123567T\r"
