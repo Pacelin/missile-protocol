@@ -6,7 +6,6 @@ namespace Project.Game
     {
         [SerializeField] private DurabilityProgressBarItem[] _items;
         [SerializeField] private float _delayPerItem;
-        [SerializeField] private int _debugAmount = 1;
         
         private int _currentAmount;
         
@@ -26,14 +25,6 @@ namespace Project.Game
         {
             G.ShipModel.OnDamage -= OnShipDamage;
             G.ShipModel.OnHeal -= OnShipHeal;
-        }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.D))
-                G.ShipModel.TakeDamage(_debugAmount);
-            if (Input.GetKeyDown(KeyCode.H))
-                G.ShipModel.Heal(_debugAmount);
         }
 
         private void OnShipHeal()

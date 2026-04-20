@@ -395,7 +395,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 3558869394919424
-    m_Localized: It is recommended to play with a friend.
+    m_Localized: Recommended to play with a friend.
     m_Metadata:
       m_Items: []
   references:

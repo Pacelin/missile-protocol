@@ -509,7 +509,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: It is recommended to play with a friend
+  m_text: It is recommended to play with a friend.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 996d73b41cad1c246bbb169d42c994fc, type: 2}
   m_sharedMaterial: {fileID: 8006985742711815183, guid: 996d73b41cad1c246bbb169d42c994fc, type: 2}
@@ -1215,8 +1215,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 156171482949789284}
-  - {fileID: 8045411258143928615}
   - {fileID: 97852689}
+  - {fileID: 8045411258143928615}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
